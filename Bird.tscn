@@ -16,7 +16,7 @@ gradient = SubResource( 2 )
 [node name="Node" type="Node"]
 
 [node name="Bird" type="RigidBody2D" parent="."]
-position = Vector2( 192, 358.502 )
+position = Vector2( 192, 360 )
 linear_velocity = Vector2( 100, 0 )
 script = ExtResource( 2 )
 

@@ -7,6 +7,7 @@ export var FLYING_SPEED = 100
 func _ready():
     set_linear_velocity(Vector2(FLYING_SPEED, 0))
 #    if not Engine.editor_hint:
+    # TODO: remove this part. Maybe should be removed
     self.position.x = get_viewport().get_visible_rect().size.x * 2 / 5
     self.position.y = get_viewport().get_visible_rect().size.y / 2
 

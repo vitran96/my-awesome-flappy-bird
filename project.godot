@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 window/size/width=480
 window/size/height=720
+window/stretch/mode="2d"
 
 [input]
 
@@ -34,4 +35,5 @@ ui_jump={
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
