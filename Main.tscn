@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Pipe.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bird.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -5.66327, 9.43878 )
+
+[node name="Bird" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 360 )
+
+[node name="Pipes" parent="." instance=ExtResource( 1 )]
+position = Vector2( 181.123, 361.439 )
+
+[node name="Pipes2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 449.566, 557.674 )
+
+[node name="Pipes3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 685.535, 225.43 )
