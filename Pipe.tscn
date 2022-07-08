@@ -9,7 +9,7 @@ extents = Vector2( 10.447, 10 )
 scale = Vector2( 3, 3 )
 
 [node name="TopPipe" type="StaticBody2D" parent="."]
-position = Vector2( 0, -35 )
+position = Vector2( 0, -25 )
 rotation = 3.14159
 
 [node name="Sprite" type="Sprite" parent="TopPipe"]
@@ -23,7 +23,7 @@ scale = Vector2( 1.25, 13 )
 shape = SubResource( 1 )
 
 [node name="BottomPipe" type="StaticBody2D" parent="."]
-position = Vector2( 0, 35 )
+position = Vector2( 0, 25 )
 
 [node name="Sprite" type="Sprite" parent="BottomPipe"]
 position = Vector2( 0, 128 )

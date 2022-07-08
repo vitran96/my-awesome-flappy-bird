@@ -7,8 +7,7 @@
 radius = 16.2099
 height = 11.9853
 
-[node name="Bird" type="RigidBody2D"]
-linear_velocity = Vector2( 100, 0 )
+[node name="Bird" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

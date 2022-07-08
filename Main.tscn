@@ -13,7 +13,7 @@ position = Vector2( 192, 360 )
 position = Vector2( 181.123, 361.439 )
 
 [node name="Pipes2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 449.566, 557.674 )
+position = Vector2( 487.566, 557.674 )
 
 [node name="Pipes3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 685.535, 225.43 )
+position = Vector2( 775.045, 233.093 )
