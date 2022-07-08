@@ -3,8 +3,9 @@
 [ext_resource path="res://assets/bird.png" type="Texture" id=1]
 [ext_resource path="res://Bird.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 27.556, 18.8569 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 16.2099
+height = 11.9853
 
 [node name="Bird" type="RigidBody2D"]
 linear_velocity = Vector2( 100, 0 )
@@ -25,4 +26,6 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.20409, -1.26134 )
+rotation = 1.5708
 shape = SubResource( 1 )
