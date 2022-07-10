@@ -1,4 +1,3 @@
-tool
 extends KinematicBody2D
 
 export var FLYING_SPEED = 100
