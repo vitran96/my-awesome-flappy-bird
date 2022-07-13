@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Pipe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bird.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Hud.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -5.66327, 9.43878 )
 
 [node name="Bird" parent="." instance=ExtResource( 2 )]
 position = Vector2( 192, 360 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
 
 [node name="Pipes" parent="." instance=ExtResource( 1 )]
 position = Vector2( 345.357, 314.245 )
