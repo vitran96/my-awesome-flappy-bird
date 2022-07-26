@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
-export var FLYING_SPEED = 100
-export var JUMP_HEIGHT = -150
+export(int) var FLYING_SPEED := 100
+export(int) var JUMP_HEIGHT := -150
 
 enum STATE { IDLE, FALL, JUMP }
 
-var vertical_vector = Vector2(FLYING_SPEED, 0)
+var vertical_vector := Vector2(FLYING_SPEED, 0)
 
-var gravity = 98
+var gravity := 98
 
 func _process(delta):
     var state = STATE.FALL
@@ -20,7 +20,4 @@ func _process(delta):
         STATE.JUMP:
             vertical_vector.y = JUMP_HEIGHT
 
-    var collision = move_and_collide(vertical_vector * delta)
-
-    if collision:
-        print("I collided with ", collision.collider.name)
+    move_and_collide(vertical_vector * delta)
