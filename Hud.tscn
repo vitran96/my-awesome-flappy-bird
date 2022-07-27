@@ -1,12 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Hud.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Score.gd" type="Script" id=2]
 
 [node name="HUD" type="CanvasLayer"]
 
 [node name="ScoreBox" type="MarginContainer" parent="."]
-anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -41.0
+margin_bottom = 54.0
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
@@ -19,22 +20,16 @@ __meta__ = {
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 460.0
-margin_bottom = 34.0
-alignment = 2
-
-[node name="Label" type="Label" parent="ScoreBox/HBoxContainer"]
-margin_left = 377.0
-margin_right = 412.0
-margin_bottom = 14.0
-size_flags_vertical = 1
-text = "Score"
+margin_bottom = 52.0
+alignment = 1
 
 [node name="Score" type="Label" parent="ScoreBox/HBoxContainer"]
-margin_left = 416.0
-margin_right = 440.0
-margin_bottom = 14.0
+margin_left = 220.0
+margin_right = 220.0
+margin_bottom = 32.0
 size_flags_vertical = 5
-text = "100"
+custom_fonts/font = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Message" type="Label" parent="."]
 margin_right = 40.0

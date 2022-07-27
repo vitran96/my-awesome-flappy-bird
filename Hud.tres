@@ -6,4 +6,5 @@ font_path = "res://PressStart2P-Regular.ttf"
 
 [resource]
 size = 32
+use_mipmaps = true
 font_data = SubResource( 1 )

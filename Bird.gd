@@ -21,3 +21,9 @@ func _process(delta):
             vertical_vector.y = JUMP_HEIGHT
 
     move_and_collide(vertical_vector * delta)
+
+func hit_pipe():
+    print("bird hit pipe")
+
+func get_score():
+    print("get score")
