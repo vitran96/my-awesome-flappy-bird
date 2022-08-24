@@ -6,6 +6,8 @@
 [node name="Main" type="Node2D"]
 position = Vector2( -5.66327, 9.43878 )
 
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
 [node name="Bird" parent="." instance=ExtResource( 1 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -13,5 +15,3 @@ current = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="HUD" parent="." instance=ExtResource( 3 )]
