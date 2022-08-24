@@ -1,29 +1,28 @@
 extends KinematicBody2D
 
-export(int) var FLYING_SPEED := 100
-export(int) var JUMP_HEIGHT := -150
+#export(int) var FLYING_SPEED := 100
+#export(int) var JUMP_HEIGHT := -150
 
-enum STATE { IDLE, FALL, JUMP }
+#enum STATE { IDLE, FALL, JUMP }
 
-var vertical_vector := Vector2(FLYING_SPEED, 0)
+#var vertical_vector := Vector2(FLYING_SPEED, 0)
 
-var gravity := 98
+const UP := Vector2(0,-1)
+const FLAP := 200
+const MAX_FALL_SPEED = 200
+const GRAVITY := 10
 
-func _process(delta):
-    var state = STATE.FALL
+var motion := Vector2()
+
+func _ready() -> void:
+    print(GRAVITY)
+
+func _physics_process(delta: float) -> void:
+    motion.y += GRAVITY
+    if motion.y > MAX_FALL_SPEED:
+        motion.y = MAX_FALL_SPEED
+
     if Input.is_action_just_pressed("ui_jump"):
-        state = STATE.JUMP
+        motion.y = -FLAP
 
-    match state:
-        STATE.FALL:
-            vertical_vector.y += gravity * delta
-        STATE.JUMP:
-            vertical_vector.y = JUMP_HEIGHT
-
-    move_and_collide(vertical_vector * delta)
-
-func hit_pipe():
-    print("bird hit pipe")
-
-func get_score():
-    print("get score")
+    motion = move_and_slide(motion, UP)
