@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bird.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Pipe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Hud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Spawn.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -5.66327, 9.43878 )
@@ -18,10 +21,23 @@ __meta__ = {
 }
 
 [node name="Pipes" parent="." instance=ExtResource( 2 )]
-position = Vector2( 357.663, 102.561 )
+position = Vector2( 357.663, 62.5612 )
 
 [node name="Pipes2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 637.663, -177.439 )
+position = Vector2( 637.663, -97.4388 )
 
 [node name="Pipes3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 917.663, 190.561 )
+position = Vector2( 917.663, 70.5612 )
+
+[node name="Spawn" type="Area2D" parent="."]
+position = Vector2( -410.337, -9.43878 )
+scale = Vector2( -0.951772, 34.9766 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn"]
+shape = SubResource( 1 )
+
+[connection signal="area_entered" from="Spawn" to="Spawn" method="_on_Spawn_area_entered"]
