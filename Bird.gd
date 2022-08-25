@@ -14,9 +14,6 @@ const GRAVITY := 10
 
 var motion := Vector2()
 
-func _ready() -> void:
-    print(GRAVITY)
-
 func _physics_process(delta: float) -> void:
     motion.y += GRAVITY
     if motion.y > MAX_FALL_SPEED:
