@@ -1,18 +1,12 @@
 extends KinematicBody2D
 
-#export(int) var FLYING_SPEED := 100
-#export(int) var JUMP_HEIGHT := -150
-
-#enum STATE { IDLE, FALL, JUMP }
-
-#var vertical_vector := Vector2(FLYING_SPEED, 0)
-
 signal pass_pipe
 
+export(int) var MAX_FALL_SPEED = 200
+export(int) var FLAP := 200
+export(int) var GRAVITY := 10
+
 const UP := Vector2(0,-1)
-const FLAP := 200
-const MAX_FALL_SPEED = 200
-const GRAVITY := 10
 
 var motion := Vector2()
 

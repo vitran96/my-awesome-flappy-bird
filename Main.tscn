@@ -1,14 +1,15 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bird.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Pipe.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Hud.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Spawn.gd" type="Script" id=4]
+[ext_resource path="res://Main.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -5.66327, 9.43878 )
+script = ExtResource( 5 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
@@ -19,15 +20,6 @@ current = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="Pipes" parent="." instance=ExtResource( 2 )]
-position = Vector2( 357.663, 62.5612 )
-
-[node name="Pipes2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 637.663, -97.4388 )
-
-[node name="Pipes3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 917.663, 70.5612 )
 
 [node name="Spawn" type="Area2D" parent="."]
 position = Vector2( -410.337, -9.43878 )
