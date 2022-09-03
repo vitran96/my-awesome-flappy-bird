@@ -35,13 +35,13 @@ position = Vector2( 0, 151 )
 scale = Vector2( 1.25, 13 )
 shape = SubResource( 1 )
 
-[node name="ScoreArea" type="Area2D" parent="Pipes"]
+[node name="Score" type="Area2D" parent="Pipes"]
 position = Vector2( 15, 0 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pipes/ScoreArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pipes/Score"]
 shape = SubResource( 2 )
 
-[connection signal="body_shape_entered" from="Pipes/ScoreArea" to="Pipes/ScoreArea" method="_on_ScoreArea_body_shape_entered"]
+[connection signal="body_shape_entered" from="Pipes/Score" to="Pipes/Score" method="_on_ScoreArea_body_shape_entered"]

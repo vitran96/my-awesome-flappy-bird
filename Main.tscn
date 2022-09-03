@@ -40,4 +40,5 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn"]
 shape = SubResource( 1 )
 
+[connection signal="pass_pipe" from="Bird" to="HUD" method="_on_Bird_pass_pipe"]
 [connection signal="area_entered" from="Spawn" to="Spawn" method="_on_Spawn_area_entered"]
