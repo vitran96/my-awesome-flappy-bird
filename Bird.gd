@@ -24,5 +24,5 @@ func _physics_process(delta: float) -> void:
 func _on_Detect_area_entered(area: Area2D) -> void:
     if area.name == "Score":
         emit_signal("pass_pipe")
-    elif area.name == "Pipes":
+    elif area.name == "Pipes" || area.name == "Ground":
         get_tree().reload_current_scene()
