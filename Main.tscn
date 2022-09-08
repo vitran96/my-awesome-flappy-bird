@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Bird.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Hud.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Spawn.gd" type="Script" id=4]
 [ext_resource path="res://Main.gd" type="Script" id=5]
@@ -23,7 +24,8 @@ __meta__ = {
 
 [node name="Spawn" type="Area2D" parent="."]
 position = Vector2( -410.337, -9.43878 )
-scale = Vector2( -0.951772, 34.9766 )
+rotation = 3.14159
+scale = Vector2( 0.951772, -34.9766 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -32,5 +34,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn"]
 shape = SubResource( 1 )
 
+[node name="Ground" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 330 )
 [connection signal="pass_pipe" from="Bird" to="HUD" method="_on_Bird_pass_pipe"]
 [connection signal="area_entered" from="Spawn" to="Spawn" method="_on_Spawn_area_entered"]
