@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bird.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Hud.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Spawn.gd" type="Script" id=4]
 [ext_resource path="res://Main.gd" type="Script" id=5]
+[ext_resource path="res://assets/background.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -14,6 +15,10 @@ extents = Vector2( 252.443, 10 )
 [node name="Main" type="Node2D"]
 position = Vector2( -5.66327, 9.43878 )
 script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+z_index = -1
+texture = ExtResource( 6 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
@@ -48,5 +53,6 @@ shape = SubResource( 2 )
 
 [node name="Ground" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, 330 )
+z_index = 1
 [connection signal="pass_pipe" from="Bird" to="HUD" method="_on_Bird_pass_pipe"]
 [connection signal="area_entered" from="Spawn" to="Spawn" method="_on_Spawn_area_entered"]

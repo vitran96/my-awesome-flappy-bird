@@ -43,7 +43,7 @@ func pipe_spawn(x_position : int) -> void:
     var pipe_instance := Pipe.instance()
     pipe_instance.position = Vector2(x_position, rand_range(NEW_PIPE_POSITION_Y_RANGE_TOP, NEW_PIPE_POSITION_Y_RANGE_BOTTOM))
     main_node.call_deferred("add_child", pipe_instance)
-    main_node.call_deferred("move_child", pipe_instance, 0)
+#    main_node.call_deferred("move_child", pipe_instance, 0)
 
 func _on_Spawn_area_entered(area: Area2D) -> void:
     if area.name == "Pipes":
