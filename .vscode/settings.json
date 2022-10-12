@@ -1,6 +1,6 @@
 {
     "[gdscript]": {
-        "editor.insertSpaces": true,
-        "editor.detectIndentation": false
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": true
     }
 }
